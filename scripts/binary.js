@@ -101,20 +101,27 @@
 
     $(function () {
         var value;
+        var valid =true;
         $("#input-bin").on("input", function () {
             value=$("#input-bin").val();
         });    
         $("#input-bin").on("keypress", function (event) {
-            if(event.which===13)
-            {
-            $("#outbox-dec").html(toDecimal(value));
-            $("#outbox-oct").html(toOctal(value));
-           $("#outbox-hex").html(toHexadecimal(value));
+            valid=true;
+            if(event.which===13){
+            for(var i=0;i<value.length;i++){
+                if(value[i] !="0" && value[i]!="1"){
+                    valid=false;
+                }
             }
-        });    
-        $("#input-bin").on("blur", function (event) {
-            $("#outbox-dec").html(toDecimal(value));
-            $("#outbox-oct").html(toOctal(value));
-           $("#outbox-hex").html(toHexadecimal(value));
-        });    
+            if(valid)
+            {
+                $("#outbox-dec").html(toDecimal(value));
+                $("#outbox-oct").html(toOctal(value));
+                $("#outbox-hex").html(toHexadecimal(value));
+            }
+            else {
+                alert("incorrect entry please enter valid number."); 
+            }
+        }
+        }); 
     });
