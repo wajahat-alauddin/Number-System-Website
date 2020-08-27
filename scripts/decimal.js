@@ -9,6 +9,10 @@
 	}
 
 	$(function () {
+		var $outputContainer=$(".output-container");
+		var $bin=$outputContainer.find("#outbox-bin");
+		var $oct=$outputContainer.find("#outbox-oct");
+		var $hex=$outputContainer.find("#outbox-hex");
 		var value="";
 		var valid=true;
         $("#input-dec").on("input", function () {
@@ -24,9 +28,9 @@
 			if(valid)
 			{	
 				value=parseInt(value);
-            	$("#outbox-bin").html(toBinary(value));
-            	$("#outbox-oct").html(toOctal(value));
-           		$("#outbox-hex").html(toHexadecimal(value).toUpperCase());
+            	$bin.html(toBinary(value));
+            	$oct.html(toOctal(value));
+           		$hex.html(toHexadecimal(value).toUpperCase());
 			}
 			else{
 				alert("incorrect entry please enter valid number."); 

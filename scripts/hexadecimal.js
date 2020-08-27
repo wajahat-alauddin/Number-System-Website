@@ -108,23 +108,28 @@ function toHexadecimal(number)
 }
 
 $(function () {
+	var $outputContainer=$(".output-container");
+	var $bin=$outputContainer.find("#outbox-bin");
+	var $dec=$outputContainer.find("#outbox-dec");
+	var $oct=$outputContainer.find("#outbox-oct");
 	var value;
 	var valid=true;
 	$("#input-hex").on("input", function () {
 		value=$("#input-hex").val();
+		value=value.toUpperCase();
 	});    
 	$("#convert-link").on("click", function (event) {
 		valid=true;
-			for(var i=0;i<value.length;i++){
-				if ((value[i].codePointAt(0))-48 > 9 && (value[i].codePointAt(0))-55 > 15){
-					valid=false;
-				}
+		for(var i=0;i<value.length;i++){
+			if ((value[i].codePointAt(0))-48 > 9 && (value[i].codePointAt(0))-55 > 15){
+				valid=false;
 			}
+		}
 		if(valid)
 		{	
-			$("#outbox-bin").html(toBinary(value));
-			$("#outbox-dec").html(toDecimal(value));
-			$("#outbox-oct").html(toOctal(value));
+			$bin.html(toBinary(value));
+			$dec.html(toDecimal(value));
+			$oct.html(toOctal(value));
 		}
 		else{
 			alert("incorrect entry please enter valid number."); 

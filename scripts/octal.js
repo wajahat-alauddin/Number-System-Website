@@ -98,6 +98,10 @@
 		}
 	}
 	$(function () {
+		var $outputContainer=$(".output-container");
+		var $bin=$outputContainer.find("#outbox-bin");
+		var $dec=$outputContainer.find("#outbox-dec");
+		var $hex=$outputContainer.find("#outbox-hex");
 		var value;
 		var valid=true;
 		$("#input-oct").on("input", function () {
@@ -112,9 +116,9 @@
 			}
 			if(valid)
 			{	
-				$("#outbox-bin").html(toBinary(value));
-				$("#outbox-dec").html(toDecimal(value));
-				$("#outbox-hex").html(toHexadecimal(value));
+				$bin.html(toBinary(value));
+				$dec.html(toDecimal(value));
+				$hex.html(toHexadecimal(value));
 			}
 			else{
 				alert("incorrect entry please enter valid number."); 

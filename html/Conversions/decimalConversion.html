@@ -1,55 +1,56 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>
-      Octal Conversion  
+      Decimal Conversion  
     </title>
-    <link rel="stylesheet" href="../styles/convertions.css">
+    <link rel="stylesheet" href="../../styles/convertions.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="dropdown">
-                <a href="index.html" class="drop-link">Home</a>
+                <a href="../index.html" class="drop-link">Home</a>
             </div>    
             <div class="dropdown">
             <a href="#" class="drop-link">Binary</a>
                 <div class="dropdown-content">
-                    <a href="binary.html">Conversions</a>
-                    <a href="binary.html">Arithmetic <br> Operation</a>
+                    <a href="binaryConversion.html">Conversions</a>
+                    <a href="../Arithmetic/binaryArithmetic.html">Arithmetic <br> Operation</a>
                 </div>
             </div>    
             <div class="dropdown">
                 <a href ="#" class="drop-link">Decimal</a>
                 <div class="dropdown-content">
-                    <a href="decimal.html">Conversions</a>
-                    <a href="decimal.html">Arithmetic <br> Operation</a>
+                    <a href="decimalConversion.html">Conversions</a>
+                    <a href="../Arithmetic/decimalArithmetic.html">Arithmetic <br> Operation</a>
                 </div>
             </div>
             <div class="dropdown">
                 <a href="#" class="drop-link">Octal</a>
                 <div class="dropdown-content">
-                    <a href="octal.html">Conversions</a>
-                    <a href="octal.html">Arithmetic <br> Operation</a>
+                    <a href="octalConversion.html">Conversions</a>
+                    <a href="../Arithmetic/octalArithmetic.html">Arithmetic <br> Operation</a>
                 </div>
             </div>    
             <div class="dropdown">
                 <a href="#" class="drop-link">Hexadecimal</a>
                 <div class="dropdown-content">
-                    <a href="hexadecimal.html">Conversions</a>
-                    <a href="hexadecimal.html">Arithmetic <br> Operation</a>
+                    <a href="hexadecimalConversion.html">Conversions</a>
+                    <a href="../Arithmetic/hexadecimalArithmetic.html">Arithmetic <br> Operation</a>
                 </div>
             </div>    
         </nav>
     </header>
     <div>
         <h1>
-            Octal Conversion
+            Decimal Conversion
         </h1>
     </div>
     <section id="box">
     <div id="input">
-            <p> <strong>Enter Octal: </strong>
-                <input type="text" placeholder="enter the octal Number" class="input-box" id="input-oct" required>
+            <p> <strong> Enter Decimal: </strong>
+                <input type="text" placeholder="enter the Decimal Number" class="input-box" id="input-dec" required>
                 <div id="btn-container">
                     <div id="btn">
                         <a id="convert-link" href="#">Convert</a>
@@ -57,16 +58,17 @@
                 </div>
             </p>
             <p class="output-container">
-                <strong>Binary</strong><output class="output" id="outbox-bin"></output>
+                <strong>Binary</strong><output class="output" id="outbox-bin" ></output>
             </p>
             <p class="output-container">
-                <strong>Decimal</strong><output class="output" id="outbox-dec" ></output>
+            <strong>Octal</strong><output class="output" id="outbox-oct"></output>
             </p>
             <p class="output-container">
-            <strong>Hexadecimal</strong><output class="output" id="outbox-hex"></output>
+            <strong> Hexadecimal</strong><output class="output" id="outbox-hex"></output>
             </p>    
     </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../scripts/octal.js"></script>
+    <script src="../../scripts/decimal.js"></script>
 </body>
+</html>

@@ -100,6 +100,10 @@
     }
 
     $(function () {
+        var $outputContainer=$(".output-container");
+        var $dec=$outputContainer.find("#outbox-dec");
+        var $oct=$outputContainer.find("#outbox-oct");
+        var $hex=$outputContainer.find("#outbox-hex");
         var value="";
         var valid =true;
         $("#input-bin").on("input", function () {
@@ -114,9 +118,9 @@
             }
             if(valid)
             {
-                $("#outbox-dec").html(toDecimal(value));
-                $("#outbox-oct").html(toOctal(value));
-                $("#outbox-hex").html(toHexadecimal(value));
+                $dec.html(toDecimal(value));
+                $oct.html(toOctal(value));
+                $hex.html(toHexadecimal(value));
             }
             else {
                 alert("incorrect entry please enter valid number."); 
