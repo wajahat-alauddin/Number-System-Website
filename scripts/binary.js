@@ -100,14 +100,13 @@
     }
 
     $(function () {
-        var value;
+        var value="";
         var valid =true;
         $("#input-bin").on("input", function () {
             value=$("#input-bin").val();
         });    
-        $("#input-bin").on("keypress", function (event) {
+        $("#convert-link").on("click", function (event) {
             valid=true;
-            if(event.which===13){
             for(var i=0;i<value.length;i++){
                 if(value[i] !="0" && value[i]!="1"){
                     valid=false;
@@ -122,6 +121,5 @@
             else {
                 alert("incorrect entry please enter valid number."); 
             }
-        }
         }); 
     });

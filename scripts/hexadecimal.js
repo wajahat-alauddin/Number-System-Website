@@ -113,9 +113,8 @@ $(function () {
 	$("#input-hex").on("input", function () {
 		value=$("#input-hex").val();
 	});    
-	$("#input-hex").on("keypress", function (event) {
+	$("#convert-link").on("click", function (event) {
 		valid=true;
-		if(event.which===13){
 			for(var i=0;i<value.length;i++){
 				if ((value[i].codePointAt(0))-48 > 9 && (value[i].codePointAt(0))-55 > 15){
 					valid=false;
@@ -130,6 +129,5 @@ $(function () {
 		else{
 			alert("incorrect entry please enter valid number."); 
 		}
-	}
 	});
 });

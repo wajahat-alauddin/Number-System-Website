@@ -97,30 +97,27 @@
 			return hex.split("").reverse("").join("");
 		}
 	}
-		$(function () {
-			var value;
-			var valid=true;
-			$("#input-oct").on("input", function () {
-				value=$("#input-oct").val();
-			});    
-			$("#input-oct").on("keypress", function (event) {
-				valid=true;
-				if(event.which===13){
-					for(var i=0;i<value.length;i++){
-						if(parseInt(value) < 0 || parseInt(value[i]) ===NaN || parseInt(value[i]) > 7 ){
-
-							valid=false;
-						}
-					}
-				if(valid)
-				{	
-					$("#outbox-bin").html(toBinary(value));
-					$("#outbox-dec").html(toDecimal(value));
-					$("#outbox-hex").html(toHexadecimal(value));
-				}
-				else{
-					alert("incorrect entry please enter valid number."); 
+	$(function () {
+		var value;
+		var valid=true;
+		$("#input-oct").on("input", function () {
+			value=$("#input-oct").val();
+		});    
+		$("#convert-link").on("click", function (event) {
+			valid=true;
+			for(var i=0;i<value.length;i++){
+				if(parseInt(value) < 0 || parseInt(value[i]) ===NaN || parseInt(value[i]) > 7 ){
+					valid=false;
 				}
 			}
-			});
+			if(valid)
+			{	
+				$("#outbox-bin").html(toBinary(value));
+				$("#outbox-dec").html(toDecimal(value));
+				$("#outbox-hex").html(toHexadecimal(value));
+			}
+			else{
+				alert("incorrect entry please enter valid number."); 
+			}
 		});
+	});

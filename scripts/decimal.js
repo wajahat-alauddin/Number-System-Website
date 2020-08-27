@@ -9,20 +9,21 @@
 	}
 
 	$(function () {
-		var value;
+		var value="";
 		var valid=true;
         $("#input-dec").on("input", function () {
-			value=parseInt($("#input-dec").val());
-			console.log(value);
+			value=$("#input-dec").val();
         });    
-        $("#input-dec").on("keypress", function (event) {
-            valid=true;
-            if(event.which===13){
-			if(Number.isNaN(value)){
-				valid=false;
+        $("#convert-link").on("click", function (event) {
+			valid=true;
+			for(var i=0;i<value.length;i++){
+				if ((value[i].codePointAt(0))-48 < 0 || (value[i].codePointAt(0))-48 > 9){
+					valid=false;
+				}
 			}
 			if(valid)
 			{	
+				value=parseInt(value);
             	$("#outbox-bin").html(toBinary(value));
             	$("#outbox-oct").html(toOctal(value));
            		$("#outbox-hex").html(toHexadecimal(value).toUpperCase());
@@ -30,6 +31,5 @@
 			else{
 				alert("incorrect entry please enter valid number."); 
 			}
-		}
         });
 	});
