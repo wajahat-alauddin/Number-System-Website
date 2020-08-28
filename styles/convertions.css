@@ -83,16 +83,16 @@ header {
   }
   #input{
     text-align: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
   #input-bin{
-    margin-left: 60px;
+    margin-left: 68px;
   }
   #input-oct{
-    margin-left: 72px;
+    margin-left: 79px;
   }
   #input-dec{
-    margin-left: 50px;
+    margin-left: 54px;
   }
   #input-hex{
     margin-left: 10px;
@@ -109,7 +109,7 @@ header {
     height: 20px;
   }
   #btn-container{
-    margin-left: 403px;
+    margin-left: 410px;
     margin-top: -38px;
     width: max-content;
   }
@@ -166,15 +166,15 @@ header {
     text-indent: 3px;
   }
   #outbox-dec{
-    margin-left: 112px;
+    margin-left: 120px;
   }
   #outbox-bin{
-    margin-left: 122px;
+    margin-left: 134px;
   }
   #outbox-oct{
-    margin-left: 133px;
+    margin-left: 146px;
   }
   #outbox-hex{
-    margin-left: 72px;
+    margin-left: 77px;
   }
   
