@@ -155,9 +155,10 @@ $(function () {
 	});    
 	$("#convert-link").on("click", function () {
 		valid=true;
-		for(var i=0;i<hex.number.length;i++){
+		for(var i=0;i<hex1.number.length;i++){
 			if ((hex1.number[i].codePointAt(0))-48 > 9 && (hex1.number[i].codePointAt(0))-55 > 15){
 				valid=false;
+				break;
 			}
 		}
 		if(valid)
