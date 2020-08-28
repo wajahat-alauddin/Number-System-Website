@@ -14,7 +14,7 @@ header {
 .drop-link {
     background-color: inherit;
     color: white;
-    padding: 16px;
+    padding: 16px 16px 10px 16px;
     font-size: 16px;
     text-decoration: none;
     border: none;
@@ -103,7 +103,7 @@ header {
   }
   
   .input-box{
-    border:  1px solid black;
+    border:  2px solid black;
     border-radius: 5px;
     text-indent: 3px;
     height: 20px;
@@ -162,20 +162,20 @@ header {
     background-color: white;
     padding-top: 2px;
     border-radius: 5px;
-    width: 205px;
+    width: 235px;
     font-size: medium;
     text-indent: 3px;
   }
   #outbox-dec{
-    margin-left: 120px;
+    margin-left: 90px;
   }
   #outbox-bin{
-    margin-left: 134px;
+    margin-left: 104px;
   }
   #outbox-oct{
-    margin-left: 146px;
+    margin-left: 116px;
   }
   #outbox-hex{
-    margin-left: 77px;
+    margin-left: 47px;
   }
   
