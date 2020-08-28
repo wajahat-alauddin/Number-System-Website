@@ -48,19 +48,29 @@
         </h1>
     </div>
     <section id="container">
-        <div>
-            <output></output>
+        <div id="output-wrapper">
+            <output id="output">
+                <p class="result" id="bin-result">
+                    Binary:
+                </p>
+                <p class="result" id="dec-result">
+                    Decimal:
+                </p>
+            </output>
         </div>
         <div id="input-box">
-            <input class="input" type="text" placeholder="Enter First Number">
+            <input id="bin-num1" class="input" type="text" placeholder="Enter First Number">
             <select name="operation" id="operation">
-                <option value="+">+</option>
+                <option value="+" selected>+</option>
                 <option value="-">-</option>
                 <option value="*">*</option>
                 <option value="/">/</option>
             </select> 
-            <input class="input" type="text" placeholder="Enter Second Number">
+            <input id="bin-num2" class="input" type="text" placeholder="Enter Second Number">
         </div>
+            <div id="btn-container">
+                <a id="calculate-link" href="#">Calculate</a>
+            </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../../scripts/binary.js"></script>
