@@ -1,36 +1,79 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-image:linear-gradient(to right,#663177,#C63F7B);
+    width: 100%;
+    background-image:url("bg.jpg");
+    background-size: 100%;
     color: #ebdede;
 }
   
 header {
     margin: 0px;
     padding: 0px;
-    background-color: #000000;
-    text-align: center;
+    background-color: rgba(38, 38, 38, 0.7);
+    display: block;
+}
+header
+{
+    padding: 10px 5px 15px 5px;
+}
+#logo h1
+{
+  margin: 0px;
+  font-family: monospace;
+  font-size: 55px;
+}
+#logo span
+{
+  font-family: cursive;
+  font-style: italic;
+  font-size: 12px;
+}
+#logo,nav
+{
+  float: left;
+}
+#logo
+{
+  border-right: 1px solid #eee;
+  padding-right: 30px;
+}
+.clear 
+{
+  clear: both;
+}
+nav
+{
+  margin-top: 27px;
+  margin-left: 200px;
+  padding: 20px 10px 0px 10px;
+  font-family: monospace;
 }
 /* Navbar container */
 /* Style The Dropdown Button */
 .drop-link {
     background-color: inherit;
     color: white;
-    padding: 16px 16px 12px 16px;
+    padding: 10px 10px 12px 10px;
     font-size: 16px;
     text-decoration: none;
-    border: none;
+    border: 1px solid #eee;
+    margin-right: 20px;
+    border-radius: 10px;
     cursor: pointer;
   }
+
   
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     display: inline-block;
-    margin: 15px 10px 10px 10px;
+    /*margin: 15px 10px 10px 10px;*/
   }
   .dropdown .drop-link{
     font-weight: bolder;
+    font-size: 19px;
+    letter-spacing: 2px;
   }
   
   /* Dropdown Content (Hidden by Default) */
@@ -39,8 +82,10 @@ header {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    margin-top: 10px;
+    margin-top: 14px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 0px 0px 20px 20px;
+    border: 0px;
     z-index: 1;
   }
   
@@ -54,7 +99,8 @@ header {
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-      background-color: #f1f1f1
+      background-color: #f1f1f1;
+      border-radius: 0px 0px 20px 20px;
   }
   
   /* Show the dropdown menu on hover */
@@ -66,14 +112,53 @@ header {
   .dropdown:hover .drop-link {
     background-image:linear-gradient(to right,#663177,#C63F7B);
     color: black;
+    border-radius: 10px 10px 0px 0px;
+    padding-bottom: 14px;
   }
-  section{
+  #intro{
     padding: 10px;
     font-size: larger;
-    font-family: 'Times New Roman', Times, serif;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: rgba(242, 235, 235, 0.7);
+    font-family: cursive;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: #2e2c2c;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    box-shadow: 2px 2px 5px #ddd;
   }
-  @media only screen and (max-width:585px){
+  footer
+  {
+    text-align: center;
+    background-color: rgba(38, 38, 38, 0.7);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px 0px;
+  }
+  @media only screen and (max-width:596px){
     header{
+      text-align: left;
+    }
+    .drop-link {
+      margin:-7px;
+    }
+    .dropdown-content{
+      margin-left: -7px;
+    }
+    .dropdown .drop-link{
+      font-weight: bolder;
+      font-size: 15px;
+      letter-spacing: 2px;
+    }
+  }
+  @media only screen and (max-width:1080px){
+    /* header{
       text-align: left;
     }
     .drop-link {
@@ -81,5 +166,38 @@ header {
     }
     .dropdown-content{
       margin-left: -10px;
+    } */
+    nav{
+      margin-left: 100px;
     }
   }
+  @media only screen and (max-width:980px){
+    /* header{
+      text-align: left;
+    }
+    .drop-link {
+      margin:-10px;
+    }
+    .dropdown-content{
+      margin-left: -10px;
+    } */
+    nav{
+      margin-left: 0px;
+    }
+  }
+  @media only screen and (max-width:697px){
+    /* header{
+      text-align: left;
+    }
+    .drop-link {
+      margin:-10px;
+    }
+    .dropdown-content{
+      margin-left: -10px;
+    } */
+    .drop-link {
+      margin-right: 0px;
+    }
+
+  }
+
