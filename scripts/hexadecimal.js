@@ -152,6 +152,7 @@ class Hexadecimal{
 $(function () {
 	const $container=$("#container");
 	const $bin=$container.find("#outbox-bin");
+	const $hex=$container.find("#input-hex");
 	const $dec=$container.find("#outbox-dec");
 	const $oct=$container.find("#outbox-oct");
 	const $convert=$container.find("#convert-link");
@@ -182,6 +183,29 @@ $(function () {
 		}
 		else{
 			alert("incorrect entry please enter valid number."); 
+		}
+	});
+	$hex.on("keypress", function (event) {
+		if(event.which===13)
+		{
+			hex1.number=$hex.val() || 0;
+			hex1.number=hex1.number.toUpperCase();
+			valid=true;
+			for(var i=0;i<hex1.number.length;i++){
+				if ((hex1.number[i].codePointAt(0))-48 > 9 && (hex1.number[i].codePointAt(0))-55 > 15){
+					valid=false;
+					break;
+				}
+			}
+			if(valid)
+			{	
+				$bin.text(hex1.toBinary());
+				$dec.text(hex1.toDecimal());
+				$oct.text(hex1.toOctal());
+			}
+			else{
+				alert("incorrect entry please enter valid number."); 
+			}
 		}
 	});
     $calculate.on("click", function(){

@@ -142,6 +142,7 @@ class Octal {
 	$(function () {
 		const $container=$("#container");
 		const $bin=$container.find("#outbox-bin");
+		const $oct=$container.find("#input-oct");
 		const $dec=$container.find("#outbox-dec");
 		const $hex=$container.find("#outbox-hex");
 		const $convert=$container.find("#convert-link");
@@ -154,15 +155,29 @@ class Octal {
 		var oct2= new Octal();
 		var operation="+";    
 		$convert.on("click", function () {
-			oct1.number=$("#input-oct").val();
+			oct1.number=$oct.val();
 			for(var i=0;i<oct1.number.length;i++){
 				if((oct1.number[i].codePointAt(0))-48 < 0 || (oct1.number[i].codePointAt(0))-48 > 7 ){
 					return alert("incorrect entry please enter valid number."); 
 				}
 			}
-			$bin.text(oct1.toBSinary());
+			$bin.text(oct1.toBinary());
 			$dec.text(oct1.toDecimal());
 			$hex.text(oct1.toHexadecimal());
+		});
+		$oct.on("keypress", function (event) {
+			if(event.which===13)
+			{
+				oct1.number=$oct.val();
+				for(var i=0;i<oct1.number.length;i++){
+					if((oct1.number[i].codePointAt(0))-48 < 0 || (oct1.number[i].codePointAt(0))-48 > 7 ){
+						return alert("incorrect entry please enter valid number."); 
+					}
+				}
+				$bin.text(oct1.toBinary());
+				$dec.text(oct1.toDecimal());
+				$hex.text(oct1.toHexadecimal());
+			}
 		});
 		$calculate.on("click", function(){
 			oct1.number=$octNum1.val() || 0;
