@@ -144,6 +144,7 @@ class Binary {
 $(function () {
     const $container=$("#container");
     const $dec=$container.find("#outbox-dec");
+    const $bin=$container.find("#input-bin");
     const $oct=$container.find("#outbox-oct");
     const $hex=$container.find("#outbox-hex");
     const $convert=$container.find("#convert-link");
@@ -157,7 +158,7 @@ $(function () {
     var operation="+"; 
     var valid =true;
     $convert.on("click", function () {
-        bin1.number=$("#input-bin").val();
+        bin1.number=$bin.val();
         valid=true;
         for(var i=0;i<bin1.number.length;i++){
             if(bin1.number[i] !="0" && bin1.number[i]!="1"){
@@ -167,7 +168,22 @@ $(function () {
             $dec.text(bin1.toDecimal());
             $oct.text(bin1.toOctal());
             $hex.text(bin1.toHexadecimal());
-    }); 
+    });
+    $bin.on("keypress", function (event) {
+        if(event.which===13)
+        {
+            bin1.number=$(this).val();
+            valid=true;
+            for(var i=0;i<bin1.number.length;i++){
+                if(bin1.number[i] !="0" && bin1.number[i]!="1"){
+                    return alert("incorrect entry please enter valid this.number."); 
+                }
+        }
+            $dec.text(bin1.toDecimal());
+            $oct.text(bin1.toOctal());
+            $hex.text(bin1.toHexadecimal());
+        }
+    });
     $calculate.on("click", function(){
         bin1.number=$binNum1.val() || "0";
         bin2.number=$binNum2.val() || "0";

@@ -31,6 +31,7 @@
 	$(function () {
 		const $container=$("#container");
 		const $bin=$container.find("#outbox-bin");
+		const $dec=$container.find("#input-dec");
 		const $oct=$container.find("#outbox-oct");
 		const $hex=$container.find("#outbox-hex");
 		const $convert=$container.find("#convert-link");
@@ -60,6 +61,28 @@
 			}
 			else{
 				alert("incorrect entry please enter valid number."); 
+			}
+		});
+        $dec.on("keypress", function (event) {
+			if(event.which===13)
+			{
+				dec1.number=$(this).val() || 0;
+				valid=true;
+				for(var i=0;i<dec1.number.length;i++){
+					if ((dec1.number[i].codePointAt(0))-48 < 0 || (dec1.number[i].codePointAt(0))-48 > 9){
+						valid=false;
+					}
+				}
+				if(valid)
+				{	
+					dec1.number=parseInt(dec1.number);
+					$bin.text(dec1.toBinary());
+					$oct.text(dec1.toOctal());
+					$hex.text(dec1.toHexadecimal().toUpperCase());
+				}
+				else{
+					alert("incorrect entry please enter valid number."); 
+				}
 			}
 		});
 		$calculate.on("click", function(){
