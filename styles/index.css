@@ -182,6 +182,9 @@ nav
     .dropdown-content{
       margin-left: -10px;
     } */
+    body {
+      background-position: center;
+  }
     nav{
       margin-left: 20px;
     }
@@ -196,10 +199,7 @@ nav
     .dropdown-content{
       margin-left: -10px;
     } */
-    body {
-      background-size: 300%;
-      background-position: center;
-  }
+  
     nav{
       margin-left: 0px;
     }
