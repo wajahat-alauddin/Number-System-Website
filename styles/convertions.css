@@ -68,13 +68,12 @@ header {
   #container{
     text-align:center;
     margin: auto;
-    width: 50%;
+    width: 45%;
     padding: 20px 50px 20px 10px;
-    margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
     background-color: rgba(242, 235, 235, 0.7);
-    font-family: cursive;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     color: #2e2c2c;
@@ -87,7 +86,7 @@ header {
   }
   #input{
     text-align: left;
-    margin-left: 20px;
+    margin-left: 30px;
   }
   #input-bin{
     margin-left: 68px;
@@ -137,7 +136,7 @@ header {
     text-decoration: underline;
     box-shadow: 0px 3px 10px rgb(59, 46, 46);
   }
-  @media only screen and (max-width:990px){
+  @media only screen and (max-width:1125px){
     #btn-container{
       margin-left: 0px;
       margin-top: 0px;
