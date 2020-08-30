@@ -4,6 +4,7 @@ body {
     width: 100%;
     background-image:url("bg.jpg");
     background-size: 100%;
+    background-position: center;
     color: #ebdede;
 }
   
@@ -124,10 +125,10 @@ nav
     margin-top: 100px;
     margin-bottom: 100px;
     background-color: rgba(242, 235, 235, 0.7);
-    font-family:"Palatino Linotype", "Book Antiqua", serif;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
-    color: #2e2c2c;
+    color: #111110;
     letter-spacing: 1px;
     word-spacing: 10px;
     box-shadow: 2px 2px 5px #ddd;
@@ -195,6 +196,10 @@ nav
     .dropdown-content{
       margin-left: -10px;
     } */
+    body {
+      background-size: 300%;
+      background-position: center;
+  }
     nav{
       margin-left: 0px;
     }
