@@ -182,10 +182,10 @@ nav
       margin-left: -10px;
     } */
     nav{
-      margin-left: 0px;
+      margin-left: 20px;
     }
   }
-  @media only screen and (max-width:697px){
+  @media only screen and (max-width:716px){
     /* header{
       text-align: left;
     }
@@ -195,6 +195,9 @@ nav
     .dropdown-content{
       margin-left: -10px;
     } */
+    nav{
+      margin-left: 0px;
+    }
     .drop-link {
       margin-right: 0px;
     }
