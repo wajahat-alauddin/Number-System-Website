@@ -164,11 +164,6 @@ nav
       margin-left: 100px;
     }
   }
-  @media only screen and (max-width:980px){
-    nav{
-      margin-left: 20px;
-    }
-  }
   @media only screen and (max-width:987px){
     header{
       text-align: center;
@@ -192,7 +187,7 @@ nav
       margin: 0px;
     } */
     .drop-link {
-      margin-right: 0px;
+      margin-right: 2px;
     }
   }
 
