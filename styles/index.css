@@ -36,6 +36,7 @@ header
 }
 #logo
 {
+  width: 160px;
   border-right: 1px solid #eee;
   padding-right: 30px;
 }
@@ -158,54 +159,41 @@ nav
       letter-spacing: 2px;
     }
   }
-  @media only screen and (max-width:1080px){
-    /* header{
-      text-align: left;
-    }
-    .drop-link {
-      margin:-10px;
-    }
-    .dropdown-content{
-      margin-left: -10px;
-    } */
+  @media only screen and (max-width:1088px){
     nav{
       margin-left: 100px;
     }
   }
   @media only screen and (max-width:980px){
-    /* header{
-      text-align: left;
-    }
-    .drop-link {
-      margin:-10px;
-    }
-    .dropdown-content{
-      margin-left: -10px;
-    } */
-    body {
-      background-position: center;
-  }
     nav{
       margin-left: 20px;
     }
   }
-  @media only screen and (max-width:716px){
-    /* header{
-      text-align: left;
+  @media only screen and (max-width:987px){
+    header{
+      text-align: center;
     }
-    .drop-link {
-      margin:-10px;
+    #logo{
+      margin: auto;
+      float:none;
+      width: 160px;
+      padding-left: 20px;
+      border-right: none;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #eee;
     }
-    .dropdown-content{
-      margin-left: -10px;
-    } */
-  
     nav{
-      margin-left: 0px;
+      margin: auto;
+      float:none;
     }
+  }
+  @media only screen and (max-width:716px){
+    /* nav{
+      margin: 0px;
+    } */
     .drop-link {
       margin-right: 0px;
     }
-
   }
+
 
